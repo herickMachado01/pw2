@@ -15,15 +15,13 @@
 <body>
     <?php
         $valores_obtidos = [];
-        $contado = 1;
-        $valor = rand(1,6);
-        $valores_obtidos[] = $valor;
-        while($valor != 6){
+        $contado = 0;
+        
+        do{
             $contado++;
-            $valores_obtidos[] = $valor;
-            $valor = rand(1,6);
-        }
-        if(count($valores_obtidos)!=1)$valores_obtidos[] = $valor;
+            $result = rand(1,6);
+            $valores_obtidos[] = $result;
+        }while($result != 6);
 
         echo "<p class='parabens'>Parabéns, você ganhou!!!</p>\n";
         echo "<p class='parabens'>Você ganhou na {$contado} tentativa.</p>";
